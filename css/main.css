@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 10px;
+  font-family: arial, sans-serif;
+  color: #3a3a3a;
+  padding: 20px 0;
+}
+body a {
+  color: #3a3a3a;
+}
+
+.wrapper {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+body > header {
+  padding: 10px;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  overflow: hidden;
+}
+.header__logo img {
+  max-width: 200px;
+  position: relative;
+  top: 10px;
+}
+
+.main__inner {
+  border: 5px solid #3a3a3a;
+  padding: 20px;
+}
+.main__header-list {
+  margin-bottom: 25px;
+}
+.main__header-list__link, .main__aside-list__item > a {
+  font-size: 1.5em;
+  text-decoration: none;
+  padding: 7px;
+  border: 3px solid #3a3a3a;
+  display: inline-block;
+  margin-right: 20px;
+  font-weight: 600;
+  transition: 0.2s background, color;
+}
+.main__header-list__link:last-child, .main__aside-list__item > a:last-child {
+  margin-right: 0;
+}
+.main__header-list__link.active, .main__aside-list__item > a.active {
+  background: #3a3a3a;
+  color: #fff;
+}
+.main__header-list__link.active:hover, .main__aside-list__item > a.active:hover {
+  background: #3a3a3a;
+}
+.main__header-list__link:hover, .main__aside-list__item > a:hover {
+  background: rgba(0, 0, 0, 0.229);
+}
+.main__header-posts {
+  margin-bottom: 20px;
+}
+.main__header-posts__link, .main__aside-list__item nav a {
+  font-size: 1.3em;
+  font-weight: 600;
+  text-decoration: none;
+  margin-right: 20px;
+  padding: 7px;
+  transition: 0.2s background;
+}
+.main__header-posts__link:hover, .main__aside-list__item nav a:hover, .main__header-posts__link.active, .main__aside-list__item nav a.active {
+  background: rgba(0, 0, 0, 0.229);
+}
+.main__center {
+  display: flex;
+  justify-content: space-between;
+  min-height: 300px;
+}
+.main__textarea {
+  padding: 16px;
+  border: 2px solid #3a3a3a;
+  width: 65%;
+}
+.main__textarea img {
+  margin-bottom: 20px;
+}
+.main__textarea h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+.main__textarea p {
+  font-size: 1.5em;
+}
+.main__aside {
+  padding: 16px;
+  border: 2px solid #3a3a3a;
+  width: 25%;
+  margin-left: auto;
+}
+.main__aside-list__item {
+  margin-bottom: 20px;
+  max-height: 40px;
+  transition: 1s max-height;
+  overflow: hidden;
+}
+.main__aside-list__item > a {
+  margin-bottom: 15px;
+}
+.main__aside-list__item nav a {
+  display: inline-block;
+}
+.main__aside-list__item:last-child {
+  margin-bottom: 0;
+}
+.main__aside-list__item.active {
+  max-height: 400px;
+}
+.main__aside-list__item.active > a {
+  background: #3a3a3a;
+  color: #fff;
+}
+.main__aside-list__item.active > a:hover {
+  background: #3a3a3a;
+}
+
+/*# sourceMappingURL=main.css.map */

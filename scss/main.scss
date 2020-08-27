@@ -1,0 +1,159 @@
+$text-color: rgb(58, 58, 58);
+$border-color: $text-color;
+$link-active: rgba(0, 0, 0, 0.229);
+
+* {
+    // yeah, bad reset but for this proj - normally
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 10px;
+    font-family: arial, sans-serif;
+    color: $text-color;
+    padding: 20px 0;
+    a {
+        color: $text-color;
+    }
+}
+
+.wrapper {
+    max-width: 980px;
+    margin: 0 auto
+}
+
+body > header {
+    padding: 10px;
+}
+
+.header {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        overflow: hidden;
+
+        img {
+            max-width: 200px;
+            position: relative;
+            top: 10px;
+        }
+    }
+}
+
+.main {
+    &__inner {
+        border: 5px solid $border-color;
+        padding: 20px;
+    }
+
+    &__header {
+        &-list {
+            margin-bottom: 25px;
+
+            &__link {
+                font-size: 1.5em;
+                text-decoration: none;
+                padding: 7px;
+                border: 3px solid $border-color;
+                display: inline-block;
+                margin-right: 20px;
+                font-weight: 600;
+                transition: .2s background, color;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &.active {
+                    background: $border-color;
+                    color: #fff;
+
+                    &:hover {
+                        background: $border-color;
+                    }
+                }
+
+                &:hover {
+                    background: $link-active;
+                }
+            }
+        }
+
+        &-posts {
+            margin-bottom: 20px;
+            &__link {
+                font-size: 1.3em;
+                font-weight: 600;
+                text-decoration: none;
+                margin-right: 20px;
+                padding: 7px;
+                transition: .2s background;
+                &:hover, &.active {
+                    background: $link-active;
+                }
+            }
+        }
+    }
+
+    &__center {
+        display: flex;
+        justify-content: space-between;
+        min-height: 300px;
+    }
+    &__textarea {
+        padding: 16px;
+        border: 2px solid $border-color;
+        width: 65%;
+        img {
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.5em;
+        }
+    }
+    &__aside {
+        padding: 16px;
+        border: 2px solid $border-color;
+        width: 25%;
+        margin-left: auto;
+        &-list {
+           &__item {
+               margin-bottom: 20px;
+               max-height: 40px;
+               transition: 1s max-height;
+               overflow: hidden;
+               > a {
+                   @extend .main__header-list__link;
+                   margin-bottom: 15px;
+               }
+               nav a {
+                    @extend .main__header-posts__link;
+                    display: inline-block;
+               }
+               &:last-child {
+                   margin-bottom: 0;
+               }
+               &.active {
+                    max-height: 400px;
+                    > a {
+                        background: $border-color;
+                        color: #fff;
+    
+                        &:hover {
+                            background: $border-color;
+                        }
+                    }
+               }
+           }
+        }
+    }
+}

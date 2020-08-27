@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>JavaScript Patterns</title>
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <div class="header__inner">
+                <div class="header__text">
+                    <h1>Mediator pattern</h1>
+                    <h2>JavaScript task in EPAM University. Dev by Anton Burchak.</h2>
+                </div>
+                <div class="header__logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="wrapper">
+            <div class="main__inner">
+                <header class="main__header">
+                    <nav class="main__header-list">
+                        <a href="#" class="main__header-list__link active">Author 1</a>
+                        <a href="#" class="main__header-list__link">Author 2</a>
+                        <a href="#" class="main__header-list__link">Author 3</a>
+                    </nav>
+                    <nav class="main__header-posts">
+                        <a href="#" class="main__header-posts__link active">Post 1</a>
+                        <a href="#" class="main__header-posts__link">Post 2</a>
+                        <a href="#" class="main__header-posts__link">Post 3</a>
+                    </nav>
+                </header>
+                <main class="main__center">
+                    <section class="main__textarea">
+                        <!-- <h2>Post 1</h2>
+                        <p>Post 1 description</p> -->
+                    </section>
+                    <aside class="main__aside">
+                        <nav class="main__aside-list">
+                            <div class="main__aside-list__item active">
+                                <a href="#">Author 1</a>
+                                <nav>
+                                    <a href="#" class="active">Post 1</a>
+                                    <a href="#">Post 2</a>
+                                    <a href="#">Post 3</a>
+                                </nav>
+                            </div>
+                            <div class="main__aside-list__item">
+                                <a href="#">Author 2</a>
+                            </div>
+                            <div class="main__aside-list__item">
+                                <a href="#">Author 3</a>
+                            </div>
+                            
+                        </nav>
+                    </aside>
+                </main>
+            </div>
+        </div>
+    </main>
+    <script src="js/Server.js"></script>
+    <script src="js/Mediator.js"></script>
+    <script src="js/Parser.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
